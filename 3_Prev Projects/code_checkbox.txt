@@ -1,0 +1,10 @@
+Sub CHKBOX1_Click()
+Dim strName As String
+    strName = Application.Caller
+    If Left(strName, 3) <> "CHK" Then strName = "CHK" & strName
+    If ActiveSheet.Shapes(strName).TextFrame.Characters.Text = "" Then
+        ActiveSheet.Shapes(strName).TextFrame.Characters.Text = "ü"
+    Else
+        ActiveSheet.Shapes(strName).TextFrame.Characters.Text = ""
+    End If
+End Sub
