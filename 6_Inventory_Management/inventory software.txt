@@ -1,0 +1,23 @@
+software to make invoices and payment receipts
+can't be used for stocks
+inventory management solution
+if daily data export done
+then software to import all data
+and then help to manage inventory
+expiry control and unit control
+some standard reports
+which client
+import will tell client codes
+
+
+SQL server or any other option
+
+1. 100 for each product and 2 is each price
+2. Purchase should all be picked
+3. Supplier account
+4. Customer list or account
+5. Product list and quantities
+6. 100 bought and 80 sold
+7. Rest is as balance
+8. Reports for each item (Qty or Expiry or anything) 
+From Date -> To Date
