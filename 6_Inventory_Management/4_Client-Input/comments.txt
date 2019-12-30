@@ -1,0 +1,7 @@
+1. use of boxes for displaying the Qty
+2. search should show only for NAT not all others 
+3. Stock report - history of each unit
+from where stock-in came and from where stock-out
+
+4. Purchase template is simple one
+ - Cost template is different
