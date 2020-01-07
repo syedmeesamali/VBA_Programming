@@ -2,3 +2,6 @@ Wht not Excel: https://www.unleashedsoftware.com/blog/pitfalls-excel-inventory-m
 
 https://excelchamps.com/excel-inventory-management-template-user-forms-vba/
 
+
+https://stackoverflow.com/questions/12324190/vba-code-to-set-date-format-for-a-specific-column-as-yyyy-mm-dd/12324368
+
