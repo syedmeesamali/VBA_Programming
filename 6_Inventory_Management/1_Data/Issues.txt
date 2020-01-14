@@ -1,0 +1,5 @@
+1. Below zero issue for stock report
+2. Sheets naming (from the input - "MasterSheet" for purchase sheet name)
+3. General filters should be removed before stock report
+4. Input files issue - should not duplicate
+5. Functions individually for each work
