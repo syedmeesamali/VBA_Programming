@@ -1,0 +1,16 @@
+just an example,,,, lets say I did send this email address (.................................@...................com) a multiple emails. I just wanted all emails has been sent to this email address saved in one pdf document and the name of the document should be a number provided in the same row in the Excel sheet> Is this clear?
+
+04:48 pm
+we need to make a dialog box that we enter the email address then the VBA code do the job automatically
+
+04:50 pm
+or the VBA do automatically save all sent emails as sequence in a direct location folder < this preferred
+
+ pm
+please look at the picture I sent you, this is the sent folder in the outlook. I past an email address in the search bar then the results are 9 sent emails to the same email address, I want all 9 results saved automatically in one pdf
+
+01:29 pm
+I will send you an example of the Excel sheet now
+
+01:30 pm
+
