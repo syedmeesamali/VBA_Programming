@@ -1,0 +1,11 @@
+Okay i did bit of refactoring i.e. made code more readable and below are few general tips to make it work exactly as you want (I didn't get still get the original logic why it works the way it works but i will concentrate on the programming part).
+
+1. I have replaced the vlookup with variable names. You can always do that by just doing "Dim (varName) as String" where varName is the name you want to give that string variable and just equating to the vlookup value.
+
+2. For debugging the code (i.e. visualizing what it does at every step) just add watch. (as per one photo attached) and then you can visualize the value of each variable at EACH STEP of program.
+
+3. To step into program i.e. run EVERY STEP one by one just press F8. This will run program LINE BY LINE. This is very powerful debug method.
+
+4. You can also used "Debug.print" to print values on the immediate window (Ctrl + G)
+
+The above should be enough to get going and refactoring as required. One big missing thing from code editor is the matching if-endif and for-endfor (i.e. you can't see which one ends where are when.) You can use external editor like VScode if comfortable. 
