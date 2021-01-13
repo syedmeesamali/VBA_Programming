@@ -1,0 +1,70 @@
+Option Explicit
+
+Sub Data_Collection()
+Dim ws As Worksheet, wb As Workbook
+Dim locDesc As Range, Count As Integer, newRng As Range
+Dim i As Integer, j As Integer, rngSheet As Range, rCell As Variant, m As Integer
+Dim hLink As Hyperlink
+
+Dim startRow As Integer, endRow As Integer
+
+Count = 0
+Set wb = ThisWorkbook
+Set newRng = wb.Sheets("Summary").Range("a65536").End(xlUp).Offset(1, 0)
+
+Application.ScreenUpdating = False
+On Error Resume Next
+
+i = 0
+For Each ws In wb.Worksheets
+        With ws
+        ws.Unprotect
+        'Criteria for data collection sheets
+            If InStr(1, .Range("A1").Value, "Date:") > 0 Then
+                Set locDesc = .Range("B2:B5").Find(What:="PROJECT", LookIn:=xlValues, LookAt:=xlPart, SearchOrder:=xlByRows)
+                startRow = locDesc.Row
+                endRow = .Cells(Rows.Count, "G").End(xlUp).Row + 1
+            
+              Set rngSheet = .Range("B3" & ":" & "B" & endRow)
+              For Each rCell In rngSheet
+                    i = i + 1
+                    newRng.Offset(i, 1).Value = .Range("B1").Value
+                    newRng.Offset(i, 2).Value = rCell.Value
+                    newRng.Offset(i, 3).Value = rCell.Offset(0, 1).Value
+                    newRng.Offset(i, 4).Value = rCell.Offset(0, 3).Value
+                    newRng.Offset(i, 5).Value = rCell.Offset(0, 4).Value
+                    newRng.Offset(i, 6).Value = rCell.Offset(0, 5).Value
+                    
+                    newRng.Offset(i, 1).EntireColumn.AutoFit
+                    newRng.Offset(i, 2).EntireColumn.AutoFit
+                    newRng.Offset(i, 3).EntireColumn.AutoFit
+                    newRng.Offset(i, 4).EntireColumn.AutoFit
+                    newRng.Offset(i, 5).EntireColumn.AutoFit
+                    'newRng.Offset(i, 6).EntireColumn.AutoFit
+                Next rCell
+             Else
+             End If
+         End With
+Next
+
+j = 0
+For Each ws In wb.Worksheets
+        With ws
+        'ws.Unprotect
+            On Error Resume Next
+            If InStr(1, .Range("A1").Value, "Date:") > 0 Then
+                Set locDesc = .Range("B2:B5").Find(What:="PROJECT", LookIn:=xlValues, LookAt:=xlPart, SearchOrder:=xlByRows)
+                startRow = locDesc.Row
+                endRow = .Cells(Rows.Count, "G").End(xlUp).Row
+              Set rngSheet = .Range("B3" & ":" & "B" & endRow)
+                For Each hLink In ws.Hyperlinks
+                    j = j + 1
+                    newRng.Offset(j, 8).Value = hLink.Address
+                Next hLink
+             Else
+             End If
+         End With
+Next
+
+Sheets("Summary").Activate
+End Sub
